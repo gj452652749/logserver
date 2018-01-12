@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.hawker.flume.pojo.DtFlumeApplyBean;
+import com.hawker.flume.vo.DtFlumeApplyBean;
 @Mapper
 public interface DtFlumeApplyDao {
 

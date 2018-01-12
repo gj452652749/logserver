@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hawker.cloud.conf.ConfigurationManager;
-import com.hawker.flume.pojo.DtFlumeApplyBean;
-import com.hawker.flume.pojo.RemoteHost;
+import com.hawker.flume.vo.DtFlumeApplyBean;
+import com.hawker.flume.vo.RemoteHost;
 import com.hawker.remoteshell.SSHShell;
 
 @Service

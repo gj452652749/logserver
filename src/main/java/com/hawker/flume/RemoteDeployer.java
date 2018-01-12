@@ -1,6 +1,6 @@
 package com.hawker.flume;
 
-import com.hawker.flume.pojo.RemoteHost;
+import com.hawker.flume.vo.RemoteHost;
 
 /**
  * 负责将flume agent部署到宿主机

@@ -1,4 +1,4 @@
-package com.hawker.flume.pojo;
+package com.hawker.flume.vo;
 
 public class ResponseResult {
 	int code=0;

@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.hawker.flume.dao.DtFlumeApplyDao;
-import com.hawker.flume.pojo.DtFlumeApplyBean;
-import com.hawker.flume.pojo.ResponseResult;
+import com.hawker.flume.vo.DtFlumeApplyBean;
+import com.hawker.flume.vo.ResponseResult;
 @Service
 public class DtFlumeApplyService {
 	protected final static Logger logger = LoggerFactory.getLogger(DtFlumeApplyService.class);

@@ -2,7 +2,7 @@ package com.hawker.remoteshell;
 
 import java.io.IOException;
 
-import com.hawker.flume.pojo.RemoteHost;
+import com.hawker.flume.vo.RemoteHost;
 import com.trilead.ssh2.Connection;
 
 public class SSH2Facade {

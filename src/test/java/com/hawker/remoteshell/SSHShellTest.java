@@ -3,7 +3,7 @@ package com.hawker.remoteshell;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSONArray;
-import com.hawker.flume.pojo.RemoteHost;
+import com.hawker.flume.vo.RemoteHost;
 
 public class SSHShellTest {
 

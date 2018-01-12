@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.hawker.flume.consts.ConfigConsts;
-import com.hawker.flume.pojo.DtFlumeApplyBean;
-import com.hawker.flume.pojo.RemoteHost;
-import com.hawker.flume.pojo.ResponseResult;
 import com.hawker.flume.service.DtFlumeApplyService;
 import com.hawker.flume.service.LogService;
+import com.hawker.flume.vo.DtFlumeApplyBean;
+import com.hawker.flume.vo.RemoteHost;
+import com.hawker.flume.vo.ResponseResult;
 
 @RestController
 @RequestMapping("/flumeapply")

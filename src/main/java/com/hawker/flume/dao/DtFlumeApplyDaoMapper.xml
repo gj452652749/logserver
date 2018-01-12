@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hawker.flume.dao.DtFlumeApplyDao">
+	<resultMap type="DtFlumeApplyBean" id="dtFlumeApplyBean">
+		<result column="id" property="id"/>
+		<result column="ip" property="ip"/>
+		<result column="port" property="port"/>
+		<result column="usrname" property="usrname"/>
+		<result column="psword" property="psword"/>
+		<result column="files" property="files"/>
+		<result column="topics" property="topics"/>
+		<result column="kafkaHosts" property="kafkaHosts"/>
+	</resultMap>
+
+	<!-- 取得插入数据后的id -->
+	<insert id="save" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+		insert into dt_flume_apply(ip,port,usrname,psword,files,kafkaHosts)
+		values(#{ip},#{port},#{usrname},#{psword},#{files},#{kafkaHosts})
+	</insert>
+
+	<update id="update">
+		update dt_flume_apply
+		set files = #{arg1},topics=#{arg2} 
+		where id = #{arg0}
+	</update>
+	
+	<delete id="delete">
+		delete from dt_flume_apply
+		where id = #{id}
+	</delete>
+	
+	<select id="getPage" resultMap="dtFlumeApplyBean">
+		select * 
+		from dt_flume_apply limit #{arg0},#{arg1} 
+	</select>
+	<select id="getRows" resultType="Integer">
+		select count(*) from dt_flume_apply 
+	</select>
+	<select id="getById" resultMap="dtFlumeApplyBean">
+		select * 
+		from dt_flume_apply where id= #{id}
+	</select>
+	<select id="getFiles" resultType="String">
+		select distinct files 
+		from dt_flume_apply where ip= #{ip}
+	</select>
+</mapper>

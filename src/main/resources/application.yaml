@@ -1,0 +1,24 @@
+spring:
+ profiles:
+  active: dev
+---  
+spring:
+ profiles: dev
+zk:
+ hosts: 127.0.0.1:2181
+bootstrap:
+ servers: 172.18.6.4:9092
+agent:
+ sinks:
+  kafka1:
+   brokerList: dx01-bigdata-test:9092
+---
+spring:
+ profiles: test
+zk:
+ hosts: 127.0.0.1:2181
+---
+spring:
+ profiles: pro
+zk:
+ hosts: 127.0.0.1:2181
